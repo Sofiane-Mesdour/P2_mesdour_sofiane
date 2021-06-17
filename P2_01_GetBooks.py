@@ -17,3 +17,8 @@ if response.ok:
    title=html.find('h1')
        
    ps=html.findAll('p')
+
+   imgs=html.find('img')
+   imgString=str(imgs['src'])
+   imgString=imgString[5:]
+   imgString='https://books.toscrape.com'+imgString
