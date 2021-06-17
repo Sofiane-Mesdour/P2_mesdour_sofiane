@@ -28,3 +28,28 @@ if response.ok:
    numAvailable=num[0]
        
    prod=str(ps[3].text)
+
+   upc=tds[0].text
+       
+   cat=tds[1].text
+       
+   prixH=tds[2].text
+       
+   prixT=tds[3].text
+       
+   rating=str(ps[2]['class'][1])
+       
+       
+      
+   dataBook.append (url)
+   dataBook.append (upc)
+   dataBook.append (title.text)
+   dataBook.append (prixH)
+   dataBook.append (prixT)
+   dataBook.append (numAvailable)
+   dataBook.append (prod)
+   dataBook.append (cat)
+   dataBook.append (rating)
+   dataBook.append(imgString)
+
+   print(dataBook)
