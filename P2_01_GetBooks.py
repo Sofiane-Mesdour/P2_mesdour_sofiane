@@ -22,3 +22,9 @@ if response.ok:
    imgString=str(imgs['src'])
    imgString=imgString[5:]
    imgString='https://books.toscrape.com'+imgString
+
+   numAvailableStr=str(tds[5])
+   num=([int(s) for s in re.findall(r'-?\d+\.?\d*', numAvailableStr)])
+   numAvailable=num[0]
+       
+   prod=str(ps[3].text)
