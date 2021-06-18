@@ -29,8 +29,24 @@ if response.ok:
     ul=str(uls[2])
     ul=BeautifulSoup(ul,'lxml')
     lis2=ul.findAll('li')
-    
+    """
     try:
         os.mkdir(imageFolder)
     except:
         print('dossier exsiste déja')
+        """
+
+    for li in lis2:
+            
+            link=li.find('a')
+            ahref=link['href']
+
+            category=link.text
+            category=category.strip()
+            category=category.lower()
+            categoryFolder= './output/'+category
+            
+            try:
+                os.mkdir(categoryFolder)
+            except:
+                print('dossier exsiste déja')
