@@ -29,3 +29,5 @@ if response.ok:
     ul=str(uls[2])
     ul=BeautifulSoup(ul,'lxml')
     lis2=ul.findAll('li')
+    lis=[lis]  
+    lis2=lis2[5]
