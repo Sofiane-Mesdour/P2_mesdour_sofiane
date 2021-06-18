@@ -30,3 +30,7 @@ if response.ok:
     ul=BeautifulSoup(ul,'lxml')
     lis2=ul.findAll('li')
     
+    try:
+        os.mkdir(imageFolder)
+    except:
+        print('dossier exsiste déja')
