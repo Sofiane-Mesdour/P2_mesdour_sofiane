@@ -8,6 +8,9 @@ import os
 from bs4 import BeautifulSoup
 from getCategory import getCategoryBooks
 
+def saveImages (varBooks,folder):
+	
+	print(folder)
 
 	try:
 		os.mkdir(os.path.join(folder,''))
@@ -24,8 +27,8 @@ from getCategory import getCategoryBooks
 		imgName=imgArray[len(imgArray)-1]
 		imgNameArray=imgName.split('.')
 		imgNameArray[0]=imgUpc
-		imgName='.'.join(imgNameArray)
-	#autre methode		imgName=imgNameArray[0]+'.'+ imgNameArray[1]
+	#autre methode	imgName='.'.join(imgNameArray)
+		imgName=imgNameArray[0]+'.'+ imgNameArray[1]
 		
 		response = requests.get(imglink)
 		imgName=folder+ "/"+ imgName
