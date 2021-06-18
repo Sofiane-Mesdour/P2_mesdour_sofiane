@@ -24,8 +24,8 @@ from getCategory import getCategoryBooks
 		imgName=imgArray[len(imgArray)-1]
 		imgNameArray=imgName.split('.')
 		imgNameArray[0]=imgUpc
-	
-		imgName=imgNameArray[0]+'.'+ imgNameArray[1]
+		imgName='.'.join(imgNameArray)
+	#autre methode		imgName=imgNameArray[0]+'.'+ imgNameArray[1]
 		
 		response = requests.get(imglink)
 		imgName=folder+ "/"+ imgName
