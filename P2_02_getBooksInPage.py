@@ -1,7 +1,7 @@
 import requests
 import re
 from bs4 import BeautifulSoup
-from getBook import getBookDetails
+from P2_01_getBooks import getBookDetails
 
 #url =('https://books.toscrape.com/catalogue/category/books/mystery_3/page-2.html')
 

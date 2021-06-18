@@ -8,8 +8,8 @@ import pandas as pd
 import os
 
 from bs4 import BeautifulSoup
-from getCategory import getCategoryBooks
-from getImages import saveImages
+from P2_03_getCategory import getCategoryBooks
+from P2_03_getImages import saveImages
 
 print ('Veuillez entrer une url')
 url = str(input())

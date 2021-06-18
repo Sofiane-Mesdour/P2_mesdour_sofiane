@@ -6,7 +6,7 @@ import pandas as pd
 import os
 
 from bs4 import BeautifulSoup
-from getCategory import getCategoryBooks
+from P2_03_getCategory import getCategoryBooks
 
 def saveImages (varBooks,folder):
 	

@@ -1,7 +1,7 @@
 import requests
 import re
 from bs4 import BeautifulSoup
-from getBooksInPage import getPage
+from P2_02_getBooksInPage import getPage
 #url ='https://books.toscrape.com/catalogue/category/books/default_15/index.html'
 
 def getCategoryBooks (url,root):
