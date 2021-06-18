@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import autopep8
 import requests
 import re
@@ -29,6 +31,9 @@ if response.ok:
     ul=str(uls[2])
     ul=BeautifulSoup(ul,'lxml')
     lis2=ul.findAll('li')
+
+    # correction en tableau lis=[lis]  
+    #lis2=lis2[5]
     """
     try:
         os.mkdir(imageFolder)
@@ -50,3 +55,22 @@ if response.ok:
                 os.mkdir(categoryFolder)
             except:
                 print('dossier exsiste déja')
+
+
+   
+            ahref='https://books.toscrape.com/'+ahref
+            books=getCategoryBooks(ahref,False)
+
+
+            categoryImageFolder=categoryFolder+imageFolder
+
+            saveImages(books,categoryImageFolder)
+
+            print(category,'........................................',' '+ str(len(books)),' Livres.')
+            
+
+            with open(categoryFolder +'/'+ category +'.csv', 'w', newline='' , encoding='utf-8' ) as books_file:
+                writer = csv.writer(books_file, quoting=csv.QUOTE_ALL,delimiter=';')
+                writer.writerow(headers)
+                writer.writerows(books)
+
