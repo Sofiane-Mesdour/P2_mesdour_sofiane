@@ -30,7 +30,7 @@ if response.ok:
     ul=str(uls[2])
     ul=BeautifulSoup(ul,'lxml')
     lis2=ul.findAll('li')
-    print(lis2)
+    #print(lis2)
     # correction en tableau lis=[lis]  
     #lis2=lis2[5]
     """
