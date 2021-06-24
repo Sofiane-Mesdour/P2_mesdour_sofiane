@@ -10,7 +10,7 @@ from getCategory import getCategoryBooks
 
 def saveImages (varBooks,folder):
 	
-	print(folder)
+	#print(folder)
 
 	try:
 		os.mkdir(os.path.join(folder,''))
