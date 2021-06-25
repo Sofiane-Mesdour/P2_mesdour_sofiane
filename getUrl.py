@@ -13,7 +13,12 @@ from getImages import saveImages
 
 print ('Veuillez entrer une url')
 url = str(input())
+
 imageFolder='/images'
+
+outFolders='./output'
+os.mkdir(outFolders)
+
 books = []
 headers = ['product_page_url', 'universal_ product_code (upc)', 'title', 'price_including_tax', 'price_excluding_tax',
            'number_available', 'product_description', 'category', 'review_rating', 'image_url']
@@ -71,4 +76,3 @@ if response.ok:
                 writer = csv.writer(books_file, quoting=csv.QUOTE_ALL,delimiter=';')
                 writer.writerow(headers)
                 writer.writerows(books)
-
