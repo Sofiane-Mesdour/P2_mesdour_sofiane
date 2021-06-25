@@ -57,7 +57,6 @@ def getBookDetails(url):
        dataBook.append (rating)
        dataBook.append(imgString)
 
-       print(dataBook)
        return dataBook
    
 
